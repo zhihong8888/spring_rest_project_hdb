@@ -56,7 +56,7 @@ public class FamilyMemberDAOHibernateImpl implements FamilyMemberDAO {
 		Session currentSession = entityManager.unwrap(Session.class);
 		
 		// save employee
-		currentSession.update(theFamilyMember);
+		currentSession.saveOrUpdate(theFamilyMember);
 
 	}
 

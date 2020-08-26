@@ -7,7 +7,7 @@
 # FROM family_member;
 
 #
-### select hosing type hdb
+### select housing type hdb
 #
 # select f.id, f.name, f.gender, f.marital_status, f.spouse_id, f.occupation_type, f.annual_income, f.dob, f.household_id, h.housing_type
 # from family_member f join household h  on f.household_id = h.id where h.housing_type = 'HDB';
