@@ -44,7 +44,7 @@ If you delete a family member, do not delete the household.
 # Project Setup
 1. Run the SQL scripts in  mysql-scipts folder.
 2. Import the project with Ecplise IDE
-3. Open CruddemoApplication.Class -> run as Java Application
+3. Open CruddemoApplication.java  -> run as Java Application
 4. Compiling Jar -> mvn install 
 
 # Running Application
