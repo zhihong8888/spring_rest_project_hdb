@@ -3,6 +3,7 @@
 ![Alt text](/notes/applicationArchitecture.png?raw=true "Title")
 
 Project Template Generated from https://start.spring.io/
+
 Spring Frameworks used
 - Spring boot
 - Spring web (Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container)
@@ -24,7 +25,9 @@ Hibernate One-to-Many Bi-Directional mapping
 - Many family members can have only 1 household (Many to one)
 
 - Assumption: 
--- Each family member can only have 1 house hold, we will not deal with many to many mapping.
-- Requirements 
+Each family member can only have 1 house hold, we will not deal with many to many mapping.
+
+- Requirements: 
 If you delete a household, do not delete the family members (No cascade delete).
 If you delete a family member, do not delete the household.
+
