@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.luv2code.springboot.cruddemo.entity.FamilyMember;
@@ -38,8 +39,7 @@ public class FamilyMemberRestController {
 	@GetMapping("/list/{familyMemberId}")
 	public FamilyMember findByIdFamilyMember(@PathVariable int familyMemberId) {
 		FamilyMember familyMember = hdbService.findByIdFamilyMember(familyMemberId);
-		
-		Map <String, String> responseMap = new HashMap<>();
+
 		if(familyMember == null) { 
 			throw new RuntimeException("FamilyMember id not found - " + familyMemberId);
 		}
@@ -78,5 +78,58 @@ public class FamilyMemberRestController {
 		return "Deleted employee id - " + familyMemberId;
 	}
 	
+	
+	//---------------------------------------------------------------------------------------------
+	// Complex queries
+	
+	@GetMapping("/list/student")
+	public List<Map<String,String>> listGrantStudentEncouragementBonus (
+			@RequestParam (required=false) String householdSize, @RequestParam (required=false) String totalIncome) {
+		return hdbService.listGrantStudentEncouragementBonus(householdSize, totalIncome);
+		
+	}
+	
+	@GetMapping("/list/family")
+	public List<Map<String,String>> listGrantFamilyTogethernessScheme (
+			@RequestParam (required=false) String householdSize, @RequestParam (required=false) String totalIncome) {
+		return hdbService.listGrantFamilyTogethernessScheme(householdSize, totalIncome);
+		
+	}
+	
+	@GetMapping("/list/elder")
+	public List<Map<String,String>> listGrantElderBonus (
+			@RequestParam (required=false) String householdSize, @RequestParam (required=false) String totalIncome) {
+		return hdbService.listGrantElderBonus(householdSize, totalIncome);
+		
+	}
+	
+	@GetMapping("/list/baby")
+	public List<Map<String,String>> listGrantBabySunshineGrant (
+			@RequestParam (required=false) String householdSize, @RequestParam (required=false) String totalIncome) {
+		return hdbService.listGrantBabySunshineGrant(householdSize, totalIncome);
+		
+	}
+	
+	@GetMapping("/list/yolo")
+	public List<Map<String,String>> listGrantYoloGstGrant (
+			@RequestParam (required=false) String householdSize, @RequestParam (required=false) String totalIncome) {
+		return hdbService.listGrantYoloGstGrant(householdSize, totalIncome);
+		
+	}
+	
+	@GetMapping("/list/schemes")
+	public Map<String,List<Map<String,String>>> listAllGrants (
+			@RequestParam (required=false) String householdSize, @RequestParam (required=false) String totalIncome) {
+		Map<String,List<Map<String,String>>> responseMap = new HashMap<>();
+		
+		responseMap.put("Student Encouragement Bonus", hdbService.listGrantStudentEncouragementBonus(householdSize, totalIncome));
+		responseMap.put("Family Togetherness", hdbService.listGrantFamilyTogethernessScheme(householdSize, totalIncome));
+		responseMap.put("Elder Bonus", hdbService.listGrantElderBonus(householdSize, totalIncome));
+		responseMap.put("Baby Sunshine Grant", hdbService.listGrantBabySunshineGrant(householdSize, totalIncome));
+		responseMap.put("Yolo Gst Grant", hdbService.listGrantYoloGstGrant(householdSize, totalIncome));
+		
+		return responseMap;
+		
+	}
 
 }

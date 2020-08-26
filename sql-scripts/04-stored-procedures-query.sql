@@ -45,8 +45,6 @@ BEGIN
 			WHERE age < 18
 			GROUP BY f.household_id
 			HAVING 
-				sum(f.annual_income) < 150000
-			AND
 				(householdSize IS NULL OR count(f.id) <= householdSize)
 			AND
 				(totalIncome IS NULL OR sum(f.annual_income) <= totalIncome)
