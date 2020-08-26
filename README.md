@@ -52,6 +52,8 @@ If you delete a family member, do not delete the household.
 1. cmd> java -jar cruddemo-0.0.1-SNAPSHOT.jar
 ---
 # Endpoints
+Apache Tomcat default endpoint: http://localhost:8080/
+- example: http://localhost:8080/household/list
 #### Household CURD Endpoints
 | HTTP Method | Endpoint | CURD action |
 | ------ | ------ | ------ |
