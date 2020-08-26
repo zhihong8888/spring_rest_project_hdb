@@ -12,13 +12,6 @@ public interface HouseholdDAO {
 	
 	public void deleteById(int theId);
 
-	public List<Object[]> listHouseholds();
-
-	public List<Household> findHouseholdTypes();
-
-	public List<Object[]> listFamilyHouseholds();
-
-	public List<Object[]> findFamilyHouseholdById(int theId);
-
-	public List<Object[]> listGrantStudentEncouragement(int householdSize, int totalIncome);
+	public List<Household> findAll();
+	
 }

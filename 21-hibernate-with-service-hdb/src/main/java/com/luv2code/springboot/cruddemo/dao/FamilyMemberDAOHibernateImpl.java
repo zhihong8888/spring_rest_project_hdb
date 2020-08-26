@@ -8,7 +8,6 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.luv2code.springboot.cruddemo.entity.FamilyMember;
 
@@ -25,7 +24,6 @@ public class FamilyMemberDAOHibernateImpl implements FamilyMemberDAO {
 	}
 
 	@Override
-	@Transactional
 	public List<FamilyMember> findAll() {
 		// get the current hibernate session
 		Session currentSession = entityManager.unwrap(Session.class);
@@ -41,7 +39,6 @@ public class FamilyMemberDAOHibernateImpl implements FamilyMemberDAO {
 	}
 
 	@Override
-	@Transactional
 	public FamilyMember findById(int theId) {
 		// get the current hibernate session
 		Session currentSession = entityManager.unwrap(Session.class);
@@ -54,7 +51,6 @@ public class FamilyMemberDAOHibernateImpl implements FamilyMemberDAO {
 	}
 
 	@Override
-	@Transactional
 	public void save(FamilyMember theFamilyMember) {
 		// get the current hibernate session
 		Session currentSession = entityManager.unwrap(Session.class);
@@ -65,7 +61,6 @@ public class FamilyMemberDAOHibernateImpl implements FamilyMemberDAO {
 	}
 
 	@Override
-	@Transactional
 	public void deleteById(int theId) {
 		// get the current hibernate session
 		Session currentSession = entityManager.unwrap(Session.class);
