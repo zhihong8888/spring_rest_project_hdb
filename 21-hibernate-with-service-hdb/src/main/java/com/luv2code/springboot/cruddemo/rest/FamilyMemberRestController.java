@@ -80,7 +80,7 @@ public class FamilyMemberRestController {
 	
 	
 	//---------------------------------------------------------------------------------------------
-	// Complex queries
+	// Grants
 	
 	@GetMapping("/list/student")
 	public List<Map<String,String>> listGrantStudentEncouragementBonus (
@@ -119,7 +119,8 @@ public class FamilyMemberRestController {
 	
 	@GetMapping("/list/schemes")
 	public Map<String,List<Map<String,String>>> listAllGrants (
-			@RequestParam (required=false) String householdSize, @RequestParam (required=false) String totalIncome) {
+			@RequestParam (required=false) String householdSize, 
+			@RequestParam (required=false) String totalIncome) {
 		Map<String,List<Map<String,String>>> responseMap = new HashMap<>();
 		
 		responseMap.put("Student Encouragement Bonus", hdbService.listGrantStudentEncouragementBonus(householdSize, totalIncome));
@@ -128,6 +129,48 @@ public class FamilyMemberRestController {
 		responseMap.put("Baby Sunshine Grant", hdbService.listGrantBabySunshineGrant(householdSize, totalIncome));
 		responseMap.put("Yolo Gst Grant", hdbService.listGrantYoloGstGrant(householdSize, totalIncome));
 		
+		return responseMap;
+		
+	}
+	
+	@GetMapping("/list/scheme")
+	public Map<String,List<Map<String,String>>> listGrants (
+			@RequestParam (required=false) String householdSize, 
+			@RequestParam (required=false) String totalIncome,
+			@RequestParam (value="type",required=false) List<String> schemes) {
+		Map<String,List<Map<String,String>>> responseMap = new HashMap<>();
+		
+		if(schemes == null) {
+			throw new RuntimeException("Missing params type={student, family, elder, baby, yolo}");
+		}
+		
+		for(String scheme: schemes) {
+			if(scheme.equals("student")) {
+				responseMap.put("Student Encouragement Bonus", hdbService.listGrantStudentEncouragementBonus(householdSize, totalIncome));
+			}
+			
+			if(scheme.equals("family")) {
+				responseMap.put("Family Togetherness", hdbService.listGrantFamilyTogethernessScheme(householdSize, totalIncome));
+			}
+			
+			if(scheme.equals("elder")) {
+				responseMap.put("Elder Bonus", hdbService.listGrantElderBonus(householdSize, totalIncome));
+			}
+			
+			if(scheme.equals("baby")) {
+				responseMap.put("Baby Sunshine Grant", hdbService.listGrantBabySunshineGrant(householdSize, totalIncome));
+			}
+			
+			if(scheme.equals("yolo")) {
+				responseMap.put("Yolo Gst Grant", hdbService.listGrantYoloGstGrant(householdSize, totalIncome));
+			}
+		}
+		
+		if(responseMap.isEmpty()) {
+			throw new RuntimeException("No valid scheme type found in query, valid type= {student, family, elder, baby, yolo}");
+		}
+		
+
 		return responseMap;
 		
 	}
