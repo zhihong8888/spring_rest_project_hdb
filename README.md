@@ -1,4 +1,4 @@
-# Building a RESTful Web Service with Spring Boot Application
+# Building a RESTful Web Service with Spring Boot and Hibernate
 
 ![Alt text](/notes/applicationArchitecture.png?raw=true "Title")
 
