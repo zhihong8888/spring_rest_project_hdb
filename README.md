@@ -45,6 +45,7 @@ If you delete a family member, do not delete the household.
 2. Import the project with Ecplise IDE
 
 ---
+# Endpoints
 #### Household CURD Endpoints
 | HTTP Method | Endpoint | CURD action |
 | ------ | ------ | ------ |
