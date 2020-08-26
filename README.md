@@ -40,10 +40,16 @@ If you delete a family member, do not delete the household.
 - Postman
 - Ecplise IDE
 - Apache Maven
-# Setup
+- Java JDK 8
+# Project Setup
 1. Run the SQL scripts in  mysql-scipts folder.
 2. Import the project with Ecplise IDE
+3. Open CruddemoApplication.Class -> run as Java Application
+4. Compiling Jar -> mvn install 
 
+# Running Application
+1. Download the release jar file
+1. cmd> java -jar cruddemo-0.0.1-SNAPSHOT.jar
 ---
 # Endpoints
 #### Household CURD Endpoints
