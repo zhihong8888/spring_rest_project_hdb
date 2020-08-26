@@ -2,7 +2,6 @@
 
 ![Alt text](/notes/applicationArchitecture.png?raw=true "Title")
 
-Project Template Generated from https://start.spring.io/
 
 Spring Frameworks used
 - Spring boot
@@ -20,6 +19,8 @@ Development tools
 - Ecplise IDE
 - Apache Maven
 
+---
+
 Hibernate One-to-Many Bi-Directional mapping
 - A household can have many family members (one to many)
 - Many family members can have only 1 household (Many to one)
@@ -30,4 +31,16 @@ Each family member can only have 1 house hold, we will not deal with many to man
 - Requirements: 
 If you delete a household, do not delete the family members (No cascade delete).
 If you delete a family member, do not delete the household.
+
+
+---
+# Installation
+- MYSQL Community Server
+- MYSQL Workbench
+- Postman
+- Ecplise IDE
+- Apache Maven
+# Setup
+1. Run the SQL scripts in  mysql-scipts folder.
+2. Import the project with Ecplise IDE
 
