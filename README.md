@@ -26,7 +26,7 @@ Hibernate One-to-Many Bi-Directional mapping
 - Many family members can have only 1 household (Many to one)
 
 - Assumption: 
-Each family member can only have 1 house hold, we will not deal with many to many mapping.
+Each family member can only have 1 registered house hold, we will not deal with many to many mapping.
 
 - Requirements: 
 If you delete a household, do not delete the family members (No cascade delete).
@@ -44,3 +44,32 @@ If you delete a family member, do not delete the household.
 1. Run the SQL scripts in  mysql-scipts folder.
 2. Import the project with Ecplise IDE
 
+---
+#### Household CURD Endpoints
+| HTTP Method | Endpoint | CURD action |
+| ------ | ------ | ------ |
+| GET | /household/list | Retrieve a list of households|
+| GET | /household/list/{householdId} | Retrieve a single household |
+| POST | /household/create | Create a new household |
+| PUT | /household/update | Update a household |
+| DELETE | /household/delete | Delete a household |
+
+#### Family Member CURD Endpoints
+| HTTP Method | Endpoint | CURD action |
+| ------ | ------ | ------ |
+| GET | /household/family/list | Retrieve a list of family members|
+| GET | /household/family/list/{householdId} | Retrieve a single family member |
+| POST | /household/family/create | Create a new household |
+| PUT | /household/family/update | Update a family member |
+| DELETE | /household/family/delete | Delete a family member |
+
+#### Govt Grant Search Endpoints
+| HTTP Method | Endpoint | CURD action | Optional Params |
+| ------ | ------ | ------ | ------ |
+| GET | /household/family/list/student?householdSize=2&totalIncome=3000 | Retrieve a list of Student Encouragement Bonus | householdSize, total_income |
+| GET | /household/family/list/family?householdSize=2&totalIncome=3000 | Retrieve a list of Family Togetherness Scheme | householdSize, total_income |
+| GET | /household/family/list/elder?householdSize=2&totalIncome=3000 | Retrieve a list of Elder Bonus | householdSize, total_income |
+| GET | /household/family/list/baby?householdSize=2&totalIncome=3000 | Retrieve a list of Baby Sunshine Grant | householdSize, total_income |
+| GET | /household/family/list/yolo?householdSize=2&totalIncome=3000 | Retrieve a list of Yolo GST Grant | householdSize, total_income |
+| GET | /household/family/list/schemes?householdSize=2&totalIncome=3000 | Retrieve all grants | householdSize, total_income |
+| GET | /household/family/list/scheme?type=yolo,student&householdSize=8&totalIncome=300000 | Retrieve grant or grant(s) where applicable | householdSize, total_income, type={student, family, elder, baby, yolo} |
