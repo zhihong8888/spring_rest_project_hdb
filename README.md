@@ -27,6 +27,7 @@ Hibernate One-to-Many Bi-Directional mapping
 
 - Assumption: 
 Each family member can only have 1 registered house hold, we will not deal with many to many mapping.
+Assume the household table have unique address fields.
 
 - Requirements: 
 If you delete a household, do not delete the family members (No cascade delete).
