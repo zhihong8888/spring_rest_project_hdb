@@ -4,7 +4,7 @@
 
 
 Spring Frameworks used
-- Spring boot (Builds stand alone, production ready Java Spring Applications. Automactically detects Spring MVC controller and starts up an embedded Apache Tomcat 7 insance within the Java application)
+- Spring boot (Builds stand alone, production ready Java Spring Applications. Automactically configures the embedded Tomcat.)
 - Spring web (Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container)
 - Spring Data JPA (Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate)
 - Spring Boot DevTools (Provides fast application restarts, LiveReload, and configurations for enhanced development experience)
