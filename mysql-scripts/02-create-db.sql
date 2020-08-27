@@ -11,7 +11,6 @@ DROP TABLE IF EXISTS `household`;
 CREATE TABLE `household` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `housing_type` varchar(128) DEFAULT NULL,
-  UNIQUE KEY `HOUSING_TYPE_UNIQUE` (`housing_type`),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
