@@ -90,4 +90,7 @@ Apache Tomcat default endpoint: http://localhost:8080/
 | GET | /household/family/list/scheme?type=yolo,student&householdSize=8&totalIncome=300000 | Retrieve grant or grant(s) where applicable | householdSize, totalIncome, type={student, family, elder, baby, yolo} |
 
 *householdSize refers to the int maximum household size.* <br/>
-*totalIncome refers to the int maximum total income.*
+*totalIncome refers to the int maximum total income.*  <br/>
+<br/>
+Special thanks to the reference course:
+https://www.udemy.com/course/spring-hibernate-tutorial/ 
