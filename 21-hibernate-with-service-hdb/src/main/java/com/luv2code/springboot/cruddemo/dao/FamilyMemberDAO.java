@@ -11,6 +11,8 @@ public interface FamilyMemberDAO {
 	
 	public FamilyMember findById(int theId);
 	
+	public FamilyMember findByName(String theName);
+	
 	public void save(FamilyMember theFamilyMember);
 	
 	public void deleteById(int theId);

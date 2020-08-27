@@ -72,6 +72,13 @@ public class HdbServiceImpl implements HdbService {
 		
 		return familyMemberDAO.findById(theId);
 	}
+	
+	@Override
+	@Transactional
+	public FamilyMember findByNameFamilyMember(String theName) {
+		
+		return familyMemberDAO.findByName(theName);
+	}
 
 	@Override
 	@Transactional

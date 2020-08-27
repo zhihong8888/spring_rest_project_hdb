@@ -23,6 +23,8 @@ public interface HdbService {
 	
 	public FamilyMember findByIdFamilyMember (int theId);
 	
+	public FamilyMember findByNameFamilyMember (String theName);
+	
 	public void saveFamilyMember (FamilyMember theFamilyMember);
 	
 	public void deleteByIdFamilyMember(int theId);

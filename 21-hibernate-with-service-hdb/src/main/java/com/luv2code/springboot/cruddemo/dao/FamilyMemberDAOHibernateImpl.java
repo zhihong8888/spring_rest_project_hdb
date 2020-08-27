@@ -49,6 +49,21 @@ public class FamilyMemberDAOHibernateImpl implements FamilyMemberDAO {
 		// return the household
 		return theFamilyMember;
 	}
+	
+	@Override
+	public FamilyMember findByName(String theName) {
+		// get the current hibernate session
+		Session currentSession = entityManager.unwrap(Session.class);
+		
+		// delete object with primary key
+		Query<FamilyMember> theQuery = currentSession.createQuery(
+				"from FamilyMember where name=:familyMemberName", FamilyMember.class);
+		theQuery.setParameter("familyMemberName", theName);
+		FamilyMember theFamilyMember = theQuery.getSingleResult();
+		
+		// return the family
+		return theFamilyMember;
+	}
 
 	@Override
 	public void save(FamilyMember theFamilyMember) {
