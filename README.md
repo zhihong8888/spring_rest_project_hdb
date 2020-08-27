@@ -89,5 +89,5 @@ Apache Tomcat default endpoint: http://localhost:8080/
 | GET | /household/family/list/schemes?householdSize=2&totalIncome=3000 | Retrieve all grants | householdSize, totalIncome |
 | GET | /household/family/list/scheme?type=yolo,student&householdSize=8&totalIncome=300000 | Retrieve grant or grant(s) where applicable | householdSize, totalIncome, type={student, family, elder, baby, yolo} |
 
-*householdSize refers to the int maximum household size.*
+*householdSize refers to the int maximum household size.* <br/>
 *totalIncome refers to the int maximum total income.*
