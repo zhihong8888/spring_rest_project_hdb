@@ -1,4 +1,4 @@
-# Building a RESTful Web Service with Spring Boot and Hibernate
+# Building a RESTful Web Service with Spring Boot and Hibernate Learning Project
 
 ![Alt text](/notes/applicationArchitecture.png?raw=true "Title")
 
@@ -57,7 +57,7 @@ If you delete a family member, do not delete the household.
 1. Download the latest jar file from release
 2. cmd> java -jar cruddemo-0.0.1-SNAPSHOT.jar
 ---
-# Endpoints
+# RESTful Endpoints
 Apache Tomcat default endpoint: http://localhost:8080/
 - Example: http://localhost:8080/household/list
 #### Household CURD Endpoints
@@ -92,5 +92,73 @@ Apache Tomcat default endpoint: http://localhost:8080/
 *householdSize refers to the int maximum household size.* <br/>
 *totalIncome refers to the int maximum total income.*  <br/>
 <br/>
-Special thanks to the reference course:  <br/>
+
+---
+# Project Objectives
+
+Provide REST End-Points for the following:
+1. Create Household
+   a. This endpoint lets you create the household (housing unit)
+   b. Household fields:
+      - HousingType (Possible options: Landed, Condominium, HDB)
+2. Add a family member to household
+  a. This endpoint lets you add a family member to the household
+  b. Family member detail fields:
+     - Name
+     - Gender
+     - MaritalStatus
+     - Spouse (either name of spouse or primary key)
+     - OccupationType (Options: Unemployed, Student, Employed)
+     - AnnualIncome
+     - DOB
+3.	List households
+  a. This endpoint lists all the households in the database
+  b. Fields:
+     - HouseholdType
+     - FamilyMembers
+       - Name
+       - Gender
+       - MaritalStatus
+       - Spouse (either name of spouse or primary key)
+       - OccupationType (Options: Unemployed, Student, Employed)
+       - AnnualIncome
+       - DOB
+4.	Show household
+  a. This endpoint shows the details of a household in the database
+  b. Fields:
+     - HouseholdType
+     - FamilyMembers
+       - Name
+       - Gender
+       - MaritalStatus
+       - OccupationType (Options: Unemployed, Student, Employed)
+       - AnnualIncome
+       - DOB
+5.	Search for households and recipients of grant disbursement endpoint. 
+  a. This endpoint should accept search parameters (eg. Household size, total income) in the URL and return results based on the criteria below.
+  b. You may include assumptions about each result in the README.
+  c. Grant Schemes:
+    - List households and qualifying family members for Student Encouragement Bonus
+       - Households with children of less than 16 years old.
+       - Household income of less than $150,000.
+    - List households and qualifying family members for Family Togetherness Scheme
+       - Households with husband & wife
+       - Has child(ren) younger than 18 years old.
+      
+    - List households and qualifying family members for Elder Bonus
+       - HDB household with family members above the age of 50.
+    - List households and qualifying family members for Baby Sunshine Grant
+       - Household with young children younger than 5.
+    - List households that qualify for the YOLO GST Grant
+       - HDB households with annual income of less than $100,000.
+
+Optional End-Points 
+- Delete household
+  - Remove Household and family members.
+- Delete Family Member
+  - Remove Family Member from the Household.
+
+---
+Special thanks to the reference course and reference project from:  <br/>
 https://www.udemy.com/course/spring-hibernate-tutorial/ 
+
