@@ -45,15 +45,15 @@ If you delete a family member, do not delete the household.
 1. Run the SQL scripts in  mysql-scipts folder.
 2. Import the project with Eclipse IDE
 
-# Running Application with IDE
+# Running Application with Eclipse IDE
 1. Open CruddemoApplication.java  -> run as Java Application
 
 # Compiling Jar
 1. Open command prompt in src root directory  
-1. cmd> mvn install 
+2. cmd> mvn install 
 
-# Running Application standalone
-1. Download the release jar file
+# Running Application Standalone
+1. Download the latest jar file from release
 2. cmd> java -jar cruddemo-0.0.1-SNAPSHOT.jar
 ---
 # Endpoints
