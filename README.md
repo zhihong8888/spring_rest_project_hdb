@@ -44,12 +44,17 @@ If you delete a family member, do not delete the household.
 # Project Setup
 1. Run the SQL scripts in  mysql-scipts folder.
 2. Import the project with Eclipse IDE
-3. Open CruddemoApplication.java  -> run as Java Application
-4. Compiling Jar cmd> mvn install 
 
-# Running Application
+# Running Application with IDE
+1. Open CruddemoApplication.java  -> run as Java Application
+
+# Compiling Jar
+1. Open command prompt in src root directory  
+1. cmd> mvn install 
+
+# Running Application standalone
 1. Download the release jar file
-1. cmd> java -jar cruddemo-0.0.1-SNAPSHOT.jar
+2. cmd> java -jar cruddemo-0.0.1-SNAPSHOT.jar
 ---
 # Endpoints
 Apache Tomcat default endpoint: http://localhost:8080/
