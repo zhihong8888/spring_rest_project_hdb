@@ -49,7 +49,7 @@ If you delete a family member, do not delete the household.
 1. Open CruddemoApplication.java  -> run as Java Application
 
 # Compiling Jar
-1. Open command prompt in src root directory  
+1. Open command prompt in project root directory  
 2. cmd> mvn install 
 
 # Running Application Standalone
