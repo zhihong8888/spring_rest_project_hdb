@@ -136,8 +136,7 @@ Provide REST End-Points for the following:
        - DOB
 5.	Search for households and recipients of grant disbursement endpoint. <br/>
   a. This endpoint should accept search parameters (eg. Household size, total income) in the URL and return results based on the criteria below. <br/>
-  b. You may include assumptions about each result in the README. <br/>
-  c. Grant Schemes: <br/>
+  b. Grant Schemes: <br/>
     - List households and qualifying family members for Student Encouragement Bonus
        - Households with children of less than 16 years old.
        - Household income of less than $150,000.
