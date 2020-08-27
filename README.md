@@ -97,13 +97,13 @@ Apache Tomcat default endpoint: http://localhost:8080/
 # Project Objectives
 
 Provide REST End-Points for the following:
-1. Create Household
-   a. This endpoint lets you create the household (housing unit)
-   b. Household fields:
+1. Create Household <br/>
+   a. This endpoint lets you create the household (housing unit) <br/>
+   b. Household fields: <br/>
       - HousingType (Possible options: Landed, Condominium, HDB)
-2. Add a family member to household
-  a. This endpoint lets you add a family member to the household
-  b. Family member detail fields:
+2. Add a family member to household <br/>
+  a. This endpoint lets you add a family member to the household  <br/>
+  b. Family member detail fields: <br/>
      - Name
      - Gender
      - MaritalStatus
@@ -111,9 +111,9 @@ Provide REST End-Points for the following:
      - OccupationType (Options: Unemployed, Student, Employed)
      - AnnualIncome
      - DOB
-3.	List households
-  a. This endpoint lists all the households in the database
-  b. Fields:
+3.	List households <br/>
+  a. This endpoint lists all the households in the database <br/>
+  b. Fields: <br/>
      - HouseholdType
      - FamilyMembers
        - Name
@@ -123,9 +123,9 @@ Provide REST End-Points for the following:
        - OccupationType (Options: Unemployed, Student, Employed)
        - AnnualIncome
        - DOB
-4.	Show household
-  a. This endpoint shows the details of a household in the database
-  b. Fields:
+4.	Show household <br/>
+  a. This endpoint shows the details of a household in the database <br/>
+  b. Fields: <br/>
      - HouseholdType
      - FamilyMembers
        - Name
@@ -134,10 +134,10 @@ Provide REST End-Points for the following:
        - OccupationType (Options: Unemployed, Student, Employed)
        - AnnualIncome
        - DOB
-5.	Search for households and recipients of grant disbursement endpoint. 
-  a. This endpoint should accept search parameters (eg. Household size, total income) in the URL and return results based on the criteria below.
-  b. You may include assumptions about each result in the README.
-  c. Grant Schemes:
+5.	Search for households and recipients of grant disbursement endpoint. <br/>
+  a. This endpoint should accept search parameters (eg. Household size, total income) in the URL and return results based on the criteria below. <br/>
+  b. You may include assumptions about each result in the README. <br/>
+  c. Grant Schemes: <br/>
     - List households and qualifying family members for Student Encouragement Bonus
        - Households with children of less than 16 years old.
        - Household income of less than $150,000.
@@ -157,6 +157,9 @@ Optional End-Points
   - Remove Household and family members.
 - Delete Family Member
   - Remove Family Member from the Household.
+  
+Disclaimer: All grants mentioned here are fictitious and do not reflect actual grants that 
+are being worked on or implemented by any government ministries.
 
 ---
 Special thanks to the reference course and reference project from:  <br/>
