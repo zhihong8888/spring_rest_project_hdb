@@ -16,7 +16,7 @@ Database used
 Development tools
 - MYSQL Workbench
 - Postman
-- Ecplise IDE
+- Eclipse IDE
 - Apache Maven
 
 ---
@@ -38,14 +38,14 @@ If you delete a family member, do not delete the household.
 - MYSQL Community Server
 - MYSQL Workbench
 - Postman
-- Ecplise IDE
+- Eclipse IDE
 - Apache Maven
 - Java JDK 8
 # Project Setup
 1. Run the SQL scripts in  mysql-scipts folder.
-2. Import the project with Ecplise IDE
+2. Import the project with Eclipse IDE
 3. Open CruddemoApplication.java  -> run as Java Application
-4. Compiling Jar -> mvn install 
+4. Compiling Jar cmd> mvn install 
 
 # Running Application
 1. Download the release jar file
