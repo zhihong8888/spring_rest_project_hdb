@@ -23,7 +23,7 @@ public class FamilyMember {
 	
 	// annotate the fields with db column names
 	
-	// ** set up mapping to instructorDetail Entity **
+	// ** set up mapping to Household Entity **
 	
 	// create constructors
 	

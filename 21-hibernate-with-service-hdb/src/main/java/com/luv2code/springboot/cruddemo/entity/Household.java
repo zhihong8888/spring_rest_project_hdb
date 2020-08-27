@@ -24,7 +24,7 @@ public class Household {
 	
 	// annotate the fields with db column names
 	
-	// ** set up mapping to instructorDetail Entity **
+	// ** set up mapping to FamilyMember Entity **
 	
 	// create constructors
 	

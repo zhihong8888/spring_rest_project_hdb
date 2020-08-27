@@ -8,7 +8,7 @@ Spring Frameworks used
 - Spring web (Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container)
 - Spring Data JPA (Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate)
 - Spring Boot DevTools (Provides fast application restarts, LiveReload, and configurations for enhanced development experience)
-- MySQL Driver (MySQL JDBC and R2DBC driver.)
+- MySQL Driver (MySQL JDBC and R2DBC driver)
 
 Database used
 - MYSQL Community Server
@@ -22,8 +22,8 @@ Development tools
 ---
 
 Hibernate One-to-Many Bi-Directional mapping
-- A household can have many family members (one to many)
-- Many family members can have only 1 household (Many to one)
+- A household can have many family members (one to many).
+- Many family members can have only 1 household (Many to one).
 
 - Assumption: 
 Each family member can only have 1 registered house hold, we will not deal with many to many mapping.
@@ -80,10 +80,13 @@ Apache Tomcat default endpoint: http://localhost:8080/
 #### Govt Grant Search Endpoints
 | HTTP Method | Endpoint | CURD action | Optional Params |
 | ------ | ------ | ------ | ------ |
-| GET | /household/family/list/student?householdSize=2&totalIncome=3000 | Retrieve a list of Student Encouragement Bonus | householdSize, total_income |
-| GET | /household/family/list/family?householdSize=2&totalIncome=3000 | Retrieve a list of Family Togetherness Scheme | householdSize, total_income |
-| GET | /household/family/list/elder?householdSize=2&totalIncome=3000 | Retrieve a list of Elder Bonus | householdSize, total_income |
-| GET | /household/family/list/baby?householdSize=2&totalIncome=3000 | Retrieve a list of Baby Sunshine Grant | householdSize, total_income |
-| GET | /household/family/list/yolo?householdSize=2&totalIncome=3000 | Retrieve a list of Yolo GST Grant | householdSize, total_income |
-| GET | /household/family/list/schemes?householdSize=2&totalIncome=3000 | Retrieve all grants | householdSize, total_income |
-| GET | /household/family/list/scheme?type=yolo,student&householdSize=8&totalIncome=300000 | Retrieve grant or grant(s) where applicable | householdSize, total_income, type={student, family, elder, baby, yolo} |
+| GET | /household/family/list/student?householdSize=2&totalIncome=3000 | Retrieve a list of Student Encouragement Bonus | householdSize, totalIncome |
+| GET | /household/family/list/family?householdSize=2&totalIncome=3000 | Retrieve a list of Family Togetherness Scheme | householdSize, totalIncome |
+| GET | /household/family/list/elder?householdSize=2&totalIncome=3000 | Retrieve a list of Elder Bonus | householdSize, totalIncome |
+| GET | /household/family/list/baby?householdSize=2&totalIncome=3000 | Retrieve a list of Baby Sunshine Grant | householdSize, totalIncome |
+| GET | /household/family/list/yolo?householdSize=2&totalIncome=3000 | Retrieve a list of Yolo GST Grant | householdSize, totalIncome |
+| GET | /household/family/list/schemes?householdSize=2&totalIncome=3000 | Retrieve all grants | householdSize, totalIncome |
+| GET | /household/family/list/scheme?type=yolo,student&householdSize=8&totalIncome=300000 | Retrieve grant or grant(s) where applicable | householdSize, totalIncome, type={student, family, elder, baby, yolo} |
+
+*householdSize refers to the int maximum household size.*
+*totalIncome refers to the int maximum total income.*
