@@ -59,7 +59,7 @@ If you delete a family member, do not delete the household.
 ---
 # Endpoints
 Apache Tomcat default endpoint: http://localhost:8080/
-- example: http://localhost:8080/household/list
+- Example: http://localhost:8080/household/list
 #### Household CURD Endpoints
 | HTTP Method | Endpoint | CURD action |
 | ------ | ------ | ------ |
@@ -92,5 +92,5 @@ Apache Tomcat default endpoint: http://localhost:8080/
 *householdSize refers to the int maximum household size.* <br/>
 *totalIncome refers to the int maximum total income.*  <br/>
 <br/>
-Special thanks to the reference course:
+Special thanks to the reference course:  <br/>
 https://www.udemy.com/course/spring-hibernate-tutorial/ 
