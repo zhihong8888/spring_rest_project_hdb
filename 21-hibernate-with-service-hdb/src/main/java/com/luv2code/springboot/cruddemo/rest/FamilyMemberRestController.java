@@ -77,6 +77,21 @@ public class FamilyMemberRestController {
 	
 	@PutMapping("/update")
 	public FamilyMember updateFamilyMember(@RequestBody FamilyMember theFamilyMember) {
+		
+		try 
+		{ 
+		    // checking valid integer using parseInt() method 
+		    Integer.parseInt(theFamilyMember.getSpouseId()); 
+		}  
+		catch (NumberFormatException e)  { 
+		    // Not a primary key, 
+			String spouseName = theFamilyMember.getSpouseId();
+			FamilyMember tempFamilyMember = hdbService.findByNameFamilyMember(spouseName);
+			if(tempFamilyMember == null) {
+				throw new RuntimeException("Spouse not found - " + spouseName);
+			}
+			theFamilyMember.setSpouseId(Integer.toString(tempFamilyMember.getId()));
+		} 
 
 		hdbService.saveFamilyMember(theFamilyMember);
 		
