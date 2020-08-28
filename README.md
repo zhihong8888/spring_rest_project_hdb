@@ -161,6 +161,6 @@ Disclaimer: All grants mentioned here are fictitious and do not reflect actual g
 are being worked on or implemented by any government ministries.
 
 ---
-Special thanks to the reference course and reference project from:  <br/>
+Special thanks to the skills learnt from this online course:  <br/>
 https://www.udemy.com/course/spring-hibernate-tutorial/ 
 
